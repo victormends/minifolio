@@ -20,3 +20,61 @@ function load_scripts(){
 }
 add_action('wp_enqueue_scripts','load_scripts');
 
+add_action('widgets_init', 'minifolio_sidebars');
+function minifolio_sidebars(){
+    register_sidebar(
+        array(
+            'name' => 'Banner',
+            'id' => 'banner',
+            'description' => 'Type any text here',
+            'before_widget' => '<div class="widget-wrapper">',
+            'after_widget' => '</div>',
+            'before_title' => '<h2 class="widget-title">',
+            'after_title' => '</h2>'
+        )
+    );
+    register_sidebar(
+        array(
+            'name' => 'About Me',
+            'id' => 'about-me',
+            'description' => 'Type any text here',
+            'before_widget' => '<div class="widget-wrapper">',
+            'after_widget' => '</div>',
+            'before_title' => '<h2 class="widget-title">',
+            'after_title' => '</h2>'
+            )
+        );
+        register_sidebar(
+            array(
+                'name' => 'About Me - Second Area',
+                'id' => 'about-me2',
+                'description' => 'Type any text here',
+                'before_widget' => '<div class="widget-wrapper">',
+                'after_widget' => '</div>',
+                'before_title' => '<h2 class="widget-title">',
+                'after_title' => '</h2>'
+            )
+        );
+    register_sidebar(
+        array(
+            'name' => 'Hire Me',
+            'id' => 'hire-me',
+            'description' => 'Type any text here',
+            'before_widget' => '<div class="widget-wrapper">',
+            'after_widget' => '</div>',
+            'before_title' => '<h2 class="widget-title">',
+            'after_title' => '</h2>'
+        )
+    );
+    register_sidebar(
+        array(
+            'name' => 'Contact',
+            'id' => 'contact',
+            'description' => 'Type any text here',
+            'before_widget' => '<div class="widget-wrapper">',
+            'after_widget' => '</div>',
+            'before_title' => '<h2 class="widget-title">',
+            'after_title' => '</h2>'
+        )
+    );
+}
