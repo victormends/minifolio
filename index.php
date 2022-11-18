@@ -21,12 +21,9 @@
     <!-- navigation section  -->
     <div class="header-content clearfix"> <a class="logo" href="#"><img src="images/logo.png" alt="Mafolio"></a>
       <nav class="navigation" role="navigation">
-        <ul class="primary-nav">
-          <li><a href="#aboutme">About Me</a></li>
-          <li><a href="#works">Works</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
+        <?php wp_nav_menu(array('theme_location' => 'primary', 'container' => '', 'menu_class' => 'primary-nav' )); ?>
       </nav>
+    
       <a href="#" class="nav-toggle">Menu<span></span></a> </div>
     <!-- navigation section  --> 
   </header>
@@ -165,13 +162,13 @@
 <section id="contact" class="section contact">
   <div class="container">
     <div class="col-md-10 col-md-offset-1 text-center">
-    <?php 
+      <?php 
           if(is_active_sidebar('Contact')){
             dynamic_sidebar('contact');
           }
-        ?>
+      ?>
     <!--contact form start-->
-      <div class="col-md-6 col-md-offset-3 conForm">
+      <!-- <div class="col-md-6 col-md-offset-3 conForm">
         <div id="message"></div>
         <form method="post" action="php/contact.php" name="cform" id="cform">
           <input name="name" id="name" type="text" class="col-xs-12 col-sm-12 col-md-12 col-lg-12" placeholder="Your name...">
@@ -180,7 +177,7 @@
           <input type="submit" id="submit" name="send" class="submitBnt" value="Send">
           <div id="simple-msg"></div>
         </form>
-      </div>
+      </div> -->
       <!--contact form end--> 
     </div>
   </div>

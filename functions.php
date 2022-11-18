@@ -77,4 +77,12 @@ function minifolio_sidebars(){
             'after_title' => '</h2>'
         )
     );
+    register_nav_menus(
+        array(
+            'primary' => 'Primary Menu',
+            'social' => 'Social Menu'
+
+        )
+    );
+
 }
