@@ -35,9 +35,11 @@
   <div class="container">
     <div class="col-md-10 col-md-offset-1">
       <div class="banner-text text-center">
-        <h1>Hey, I’m John</h1>
-        <p>Looking for a strategist and experienced designer,<br>
-          Scroll to see my work.</p>
+        <?php 
+          if(is_active_sidebar('banner')){
+            dynamic_sidebar('banner');
+          }
+        ?>
         <!-- banner text --> 
       </div>
     </div>
@@ -47,13 +49,20 @@
 <!-- description text section -->
 <section id="aboutme" class="section descripton">
   <div class="container">
-    <div class="col-md-10 col-md-offset-1 text-center"> <img src="images/designer-pic.jpg" alt="Mafolio">
-      <h1>Johnathan Doe</h1>
-      <p>UX Designer/ Developer</p>
+    <div class="col-md-10 col-md-offset-1 text-center">
+    <?php 
+          if(is_active_sidebar('about-me')){
+            dynamic_sidebar('about-me');
+          }
+        ?>
     </div>
     <div class="col-md-10 col-md-offset-1 space">
-      <p>Donec sed odio dui. Nulla vitae elit libero, a pharetra augue. Nullam id dolor id nibh ultricies vehicula ut id elit. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Aenean lacinia bibendum nulla sed consectetur. Cras mattis consectetur purus sit amet avida at eget metus.Donec sed odio dui. Nulla vitae elit libero, a pharetra augue. Nullam id dolor id nibh ultricies vehicula ut id elit. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Aenean lacinia bibendum nulla sed consectetur. Cras mattis consectetur purus sit amet avida at eget metus.</p>
-    </div>
+    <?php 
+          if(is_active_sidebar('about-me2')){
+            dynamic_sidebar('about-me2');
+          }
+        ?>
+  </div>
   </div>
 </section>
 <!-- description text section --> 
