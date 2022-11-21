@@ -167,18 +167,7 @@
             dynamic_sidebar('contact');
           }
       ?>
-    <!--contact form start-->
-      <!-- <div class="col-md-6 col-md-offset-3 conForm">
-        <div id="message"></div>
-        <form method="post" action="php/contact.php" name="cform" id="cform">
-          <input name="name" id="name" type="text" class="col-xs-12 col-sm-12 col-md-12 col-lg-12" placeholder="Your name...">
-          <input name="email" id="email" type="email" class=" col-xs-12 col-sm-12 col-md-12 col-lg-12 noMarr" placeholder="Email Address...">
-          <textarea name="comments" id="comments" cols="" rows="" class="col-xs-12 col-sm-12 col-md-12 col-lg-12" placeholder="Project Details..."></textarea>
-          <input type="submit" id="submit" name="send" class="submitBnt" value="Send">
-          <div id="simple-msg"></div>
-        </form>
-      </div> -->
-      <!--contact form end--> 
+
     </div>
   </div>
 </section>
@@ -190,15 +179,7 @@
   <div class="footer-bottom">
     <div class="container">
       <div class="col-md-12">
-        <p>
-        <ul class="footer-share">
-          <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-          <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-          <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-          <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-          <li><a href="#"><i class="fa fa-pinterest-p"></i></a></li>
-          <li><a href="#"><i class="fa fa-vimeo"></i></a></li>
-        </ul>
+      <?php wp_nav_menu( array( 'theme_location' => 'social', 'menu_class' => 'footer-share' ) ); ?>
         </p>
         <p>© 2015 All rights reserved. All Rights Reserved<br>
           Made with <i class="fa fa-heart pulse"></i> by <a href="http://www.designstub.com/">Designstub</a><br>
