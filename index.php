@@ -19,7 +19,7 @@
 <section class="banner" role="banner">
   <header id="header"> 
     <!-- navigation section  -->
-    <div class="header-content clearfix"> <a class="logo" href="#"><img src="images/logo.png" alt="Mafolio"></a>
+    <div class="header-content clearfix"> <?php the_custom_logo(); ?>
       <nav class="navigation" role="navigation">
         <?php wp_nav_menu(array('theme_location' => 'primary', 'container' => '', 'menu_class' => 'primary-nav' )); ?>
       </nav>
@@ -77,7 +77,7 @@
       $work = new WP_Query($args);
           
       if($work->have_posts() ):
-        while($work->have_posts):
+        while($work->have_posts()):
           $work->the_post();            
       
       ?>
@@ -85,8 +85,8 @@
 <div class="col-lg-3 col-md-6 col-sm-6 work"> <a href="<?php the_post_thumbnail_url(); ?>" class="work-box"> <img src="<?php the_post_thumbnail_url(); ?>" alt="">
     <div class="overlay">
       <div class="overlay-caption">
-        <h5>Project Name</h5>
-        <p>Branding</p>
+        <h5><?php the_title(); ?></h5>
+        <p><?php foreach((get_the_category()) as $category){echo $category->cat_name;}?></p>
       </div>
     </div>
     <!-- overlay --> 
@@ -94,6 +94,7 @@
 
           <?php
           endwhile;
+          wp_reset_postdata();
         else:
           echo 'there are no posts to be displayed at the moment';
         endif

@@ -33,6 +33,8 @@
         cat: 4, 6, 7, 8
         brand, web, logo, grap
 
+        <a class="logo" href="#"><img src="images/logo.png" alt="Mafolio"></a>
+
         <div class="col-lg-3 col-md-6 col-sm-6 work"> <a href="images/work-1.jpg" class="work-box"> <img src="images/work-1.jpg" alt="">
         <div class="overlay">
           <div class="overlay-caption">
